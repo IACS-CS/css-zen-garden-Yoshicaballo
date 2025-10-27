@@ -35,7 +35,11 @@ h6 {
 
 /* Background */
 #css-zen-garden {
-  background: linear-gradient(45deg, #f3f3f3 0%, #c8c8c8 100%);
+ background-image: url(forestsnow.png);
+  content: " ";
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed, scroll;
 }
 /* Page wrapper */
 .page-wrapper {
@@ -47,3 +51,17 @@ h6 {
   max-width: 960px;
   margin: 0 auto;
 }
+.body {
+  background-image: url(forestsnow.png);
+  content: " ";
+  background-size: cover;
+  position: fixed;
+}
+.intro {
+  color: purple;
+  background-color: aquamarine;
+  border-style: solid;
+  border-width: 3px;
+  padding: 10px;
+}
+
