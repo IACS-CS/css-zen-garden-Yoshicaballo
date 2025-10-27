@@ -51,12 +51,6 @@ h6 {
   max-width: 960px;
   margin: 0 auto;
 }
-.body {
-  background-image: url(forestsnow.png);
-  content: " ";
-  background-size: cover;
-  position: fixed;
-}
 .intro {
   color: purple;
   background-color: aquamarine;
