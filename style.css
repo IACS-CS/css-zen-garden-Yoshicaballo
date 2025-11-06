@@ -75,5 +75,11 @@ h6 {
 #zen-requirements p {
 text-decoration: underline;
 }
+a:link {
+  color: rgb(42, 126, 0);
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  text-decoration-thickness: 1px;
+}
 
 
