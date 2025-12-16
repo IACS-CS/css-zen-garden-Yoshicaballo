@@ -23,7 +23,7 @@
 .page-wrapper {
   /* Main font */
   font-family: "Satisfy", sans-serif;
-  letter-spacing: -1px;
+  letter-spacing: -1.1px;
 }
 h1,
 h2,
@@ -37,7 +37,8 @@ h6 {
 }
 
 /* Background */
-/*Image is from adobe stock*/
+/*Copilot helped integrate background and gradient color over it*/
+/*Image is by ehrlif provided by Adobe Stock*/
 #css-zen-garden {
   background-image: linear-gradient(rgba(255, 255, 255, 0.738), rgba(21, 0, 255, 0.344)), 
   url(forestsnow.png);
@@ -58,28 +59,42 @@ h6 {
   max-width: 960px;
   margin: 0 auto;
 }
-.intro {
-  color: purple;
+.intro, #zen-requirements, #zen-participation {
+  color:rgb(84, 0, 187);
   background-color: pink;
-  border-style: solid;
-  border-width: 3px;
   padding: 10px;
 
 }
-#zen-requirements, #zen-participation{
-  color:rgb(84, 0, 187);
-  border-style: double;
-  border-color: rgb(84, 0, 187);
-  padding: 10px;
+#zen-supporting {
+  color:rgb(0, 0, 123);
+  
 }
 #zen-requirements p {
 text-decoration: underline;
+}
+#zen-requirements {
+margin-bottom: 20px;
 }
 a:link {
   color: rgb(42, 126, 0);
   text-decoration: underline;
   text-decoration-style: wavy;
   text-decoration-thickness: 1px;
+}
+.design-selection, .design-archives, #zen-resources {
+  text-decoration: underline;
+  text-decoration-style:dotted;
+  color:rgb(84, 0, 187);
+  background-color: pink;
+  border-style: solid;
+  border-width: 3px;
+  padding: 10px;
+}
+.design-selection{
+  margin-bottom: 10px;
+}
+#zen-resources {
+  margin-top: 10px;
 }
 
 
