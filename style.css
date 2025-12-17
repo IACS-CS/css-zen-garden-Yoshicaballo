@@ -7,8 +7,8 @@
 * don't want others to use the design]
 * 
 * Acknowledgments/Sources:
-* - 
-* - 
+* - Copilot helped integrate background and gradient color over the main page, and making the links seperate from the page.
+* - Forest snow image by Pixabay provided by website Pexels
 * -
 */
 
@@ -18,8 +18,8 @@
 
 /* Get your own import URL from Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap");
 .page-wrapper {
   /* Main font */
   font-family: "Satisfy", sans-serif;
@@ -33,15 +33,17 @@ h5,
 h6 {
   /* Header font */
   font-family: "Oleo Script", cursive;
-
 }
 
 /* Background */
 /*Copilot helped integrate background and gradient color over it*/
-/*Image is by ehrlif provided by Adobe Stock*/
+/*Image is by Pixabay provided by Pexels*/
 #css-zen-garden {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.738), rgba(21, 0, 255, 0.344)), 
-  url(forestsnow.png);
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.738),
+      rgba(21, 0, 255, 0.344)
+    ),
+    url(forestsnow.png);
   content: " ";
   background-size: cover;
   background-position: center, center;
@@ -56,45 +58,102 @@ h6 {
   border: 5px solid #ffa3a3;
   padding: 1em;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  max-width: 960px;
-  margin: 0 auto;
-}
-.intro, #zen-requirements, #zen-participation {
-  color:rgb(84, 0, 187);
-  background-color: pink;
+  /*AI generated code*/
+  /* keep layout responsive but make room for fixed right sidebar */
+  --sidebar-width: 320px;
+  --sidebar-gap: 20px;
+  max-width: min(
+    960px,
+    calc(100% - var(--sidebar-width) - var(--sidebar-gap) - 40px)
+  );
+  margin: 0 calc(var(--sidebar-width) + var(--sidebar-gap)) 0 1rem;
+  /*AI generated code end*/}
+.intro,
+#zen-requirements,
+#zen-participation {
+  color: rgb(84, 0, 187);
+  background-color: rgb(255, 171, 185);
   padding: 10px;
-
+}
+header {
+  text-align: center;
+  color: rgb(0, 0, 123);
 }
 #zen-supporting {
-  color:rgb(0, 0, 123);
-  
+  color: rgb(0, 0, 123);
 }
 #zen-requirements p {
-text-decoration: underline;
+  text-decoration: underline;
 }
 #zen-requirements {
-margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 a:link {
   color: rgb(42, 126, 0);
+  text-decoration: none;
+}
+a:link:hover {
+  color: rgb(126, 42, 0);
   text-decoration: underline;
   text-decoration-style: wavy;
   text-decoration-thickness: 1px;
 }
-.design-selection, .design-archives, #zen-resources {
-  text-decoration: underline;
-  text-decoration-style:dotted;
-  color:rgb(84, 0, 187);
-  background-color: pink;
+.design-selection,
+.design-archives,
+#zen-resources {
+  border: 5px solid #ffa3a3;
+  color: rgb(84, 0, 187);
+  background: rgb(255, 210, 245);
   border-style: solid;
-  border-width: 3px;
+  border-width: 6px;
   padding: 10px;
+  text-align: center;
 }
-.design-selection{
+.design-selection {
   margin-bottom: 10px;
 }
 #zen-resources {
   margin-top: 10px;
 }
 
+.design-selection h3,
+.design-archives h3,
+#zen-resources h3 {
+  font-size: 25px;
+}
+/*AI generated code*/
+/* Fixed right sidebar: pin the existing sidebar wrapper to the viewport */
+aside.sidebar .wrapper {
+  --w: var(--sidebar-width, 320px);
+  --gap: var(--sidebar-gap, 20px);
+  position: fixed;
+  top: 1.5rem;
+  right: var(--gap);
+  width: var(--w);
+  max-height: calc(100vh - 3rem);
+  overflow: auto;
+  z-index: 1000;
+}
 
+/* Ensure the inner panels fit the fixed wrapper */
+.wrapper > div {
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+}
+
+/* Responsive: on small screens make the sidebar flow with the document */
+@media (max-width: 900px) {
+  aside.sidebar .wrapper {
+    position: static;
+    width: auto;
+    max-height: none;
+    right: auto;
+    top: auto;
+  }
+  .page-wrapper {
+    margin: 0 auto;
+    max-width: 960px;
+  }
+}
+/*AI generated code end*/
